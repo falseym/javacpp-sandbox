@@ -20,7 +20,7 @@ public class NativeLibrary {
         public native @StdString String property();     public native void property(String property);
     }
 
-    public static void main(String[] args) {
+    public static void test(String[] args) {
         // Pointer objects allocated in Java get deallocated once they become unreachable,
         // but C++ destructors can still be called in a timely fashion with Pointer.deallocate()
         NativeClass l = new NativeClass();

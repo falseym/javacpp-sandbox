@@ -25,3 +25,8 @@ libraryDependencies += "org.bytedeco" % "javacpp" % "1.2.1"
 //
 // libraryDependencies += "org.bytedeco" % "javacv" % "1.2"
 
+val buildcpp = taskKey[Unit]("Build cpp code")
+buildcpp := {
+  import org.bytedeco.javacpp.tools._
+  Builder.main(Array("org.somecpp.NativeLibrary"))
+}
