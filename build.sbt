@@ -7,7 +7,7 @@ scalacOptions ++= Seq("-deprecation")
 
 // Some dependencies like `javacpp` are packaged with maven-plugin packaging
 classpathTypes += "maven-plugin"
-libraryDependencies += "org.bytedeco" % "javacpp" % "1.2.1"
+libraryDependencies += "org.bytedeco" % "javacpp" % "1.4"
 
 // About javacpp-repsets
 // Platform classifier for native library dependencies
@@ -30,3 +30,10 @@ buildcpp := {
   import org.bytedeco.javacpp.tools._
   Builder.main(Array("org.somecpp.NativeLibrary"))
 }
+
+
+// How to build and run
+// sbt compile
+// sbt run -> choose build
+// Include folder that contains c++ lib
+// java -cp /Users/matthew/projects/javacpp-sandbox/target/scala-2.11/javacpp-sandbox-assembly-0.0.0-SNAPSHOT.jar:/Users/matthew/projects/javacpp-sandbox/ run

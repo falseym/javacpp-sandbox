@@ -5,7 +5,7 @@ import org.bytedeco.javacpp.annotation.*;
 
 // @Platform(compiler="cpp11", define="SHARED_PTR_NAMESPACE std", include="AdapterTest.h")
 
-@Platform(include="NativeLibrary.h")
+@Platform(include="../../src/main/resources/org/somecpp/NativeLibrary.h")
 @Namespace("NativeLibrary")
 public class NativeLibrary {
     public static class NativeClass extends Pointer {
